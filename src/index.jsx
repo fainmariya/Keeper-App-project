@@ -1,9 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
+import React from "react";                       // ← добавь это
+import { createRoot } from "react-dom/client";
+import App from "./components/App.jsx";
 
-ReactDOM.render(<App />, document.getElementById("root"));
-
+createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 //CHALLENGE:
 //1. Implement the add note functionality.
 //- Create a constant that keeps track of the title and content.
